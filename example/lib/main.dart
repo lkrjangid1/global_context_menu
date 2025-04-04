@@ -5,10 +5,12 @@ import 'package:flutter/services.dart';
 import 'package:global_context_menu/global_context_menu.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -36,7 +38,8 @@ class _MyAppState extends State<MyApp> {
   Future<void> initPlatformState() async {
     // If this activity was launched via ACTION_PROCESS_TEXT, get the text
     try {
-      final Map<String, dynamic> textData = await GlobalContextMenu.getProcessedText();
+      final Map<String, dynamic> textData =
+          await GlobalContextMenu.getProcessedText();
       setState(() {
         _selectedText = textData['text'] as String? ?? 'No text selected';
         _isReadOnly = textData['isReadOnly'] as bool? ?? false;
@@ -65,18 +68,18 @@ class _MyAppState extends State<MyApp> {
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Container(
-                    padding: EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(8.0),
                     color: Colors.amber[100],
                     child: Text(
                       'This device does not support ACTION_PROCESS_TEXT. '
-                          'Android 6.0 (API level 23) or higher is required.',
+                      'Android 6.0 (API level 23) or higher is required.',
                       style: TextStyle(color: Colors.red[900]),
                       textAlign: TextAlign.center,
                     ),
                   ),
                 ),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
+              const Padding(
+                padding: EdgeInsets.all(16.0),
                 child: Text(
                   'Selected text:',
                   style: TextStyle(fontSize: 16),
@@ -86,14 +89,15 @@ class _MyAppState extends State<MyApp> {
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
                   _selectedText,
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                      fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ),
               Text(
                 'Is read-only: $_isReadOnly',
-                style: TextStyle(fontSize: 16),
+                style: const TextStyle(fontSize: 16),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               if (!_isReadOnly)
                 ElevatedButton(
                   onPressed: () async {
@@ -105,13 +109,13 @@ class _MyAppState extends State<MyApp> {
                       print("Error: ${e.message}");
                     }
                   },
-                  child: Text('Convert to UPPERCASE and Return'),
+                  child: const Text('Convert to UPPERCASE and Return'),
                 ),
               ElevatedButton(
                 onPressed: () {
                   GlobalContextMenu.finishActivity();
                 },
-                child: Text('Cancel'),
+                child: const Text('Cancel'),
               ),
             ],
           ),

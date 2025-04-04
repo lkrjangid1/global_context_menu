@@ -28,7 +28,8 @@ class GlobalContextMenu {
     required String actionName,
     required String activityClass,
   }) async {
-    final bool result = await _channel.invokeMethod('registerProcessTextAction', {
+    final bool result =
+        await _channel.invokeMethod('registerProcessTextAction', {
       'actionName': actionName,
       'activityClass': activityClass,
     });
@@ -41,7 +42,8 @@ class GlobalContextMenu {
   /// - 'text': The selected text (String)
   /// - 'isReadOnly': Whether the text is read-only (bool)
   static Future<Map<String, dynamic>> getProcessedText() async {
-    final Map<dynamic, dynamic> rawResult = await _channel.invokeMethod('getProcessedText');
+    final Map<dynamic, dynamic> rawResult =
+        await _channel.invokeMethod('getProcessedText');
     // Convert to Map<String, dynamic>
     final Map<String, dynamic> result = Map<String, dynamic>.from(rawResult);
     return result;
