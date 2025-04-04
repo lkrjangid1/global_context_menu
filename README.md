@@ -61,8 +61,7 @@ Add the following to your app's `android/app/src/main/AndroidManifest.xml` file 
 ```xml
 <activity
     android:name=".YourProcessTextActivity"
-    android:label="Your Action Name"
-    android:theme="@style/Theme.AppCompat.Light">
+    android:label="Your Action Name"> // Add your action name
     <intent-filter>
         <action android:name="android.intent.action.PROCESS_TEXT" />
         <category android:name="android.intent.category.DEFAULT" />
