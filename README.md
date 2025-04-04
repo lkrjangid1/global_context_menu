@@ -13,6 +13,17 @@ A Flutter plugin that enables adding custom actions to Android's text selection 
 - 🔄 Return modified text to replace the selection
 - 🔒 Support for both read-only and editable text selections
 
+<table>
+  <tr>
+    <td align="center"><img src="https://github.com/user-attachments/assets/efca3327-4fbe-4fbb-95c6-df8aa8563e14" alt="With return action"/></td>
+    <td align="center"><img src="https://github.com/user-attachments/assets/bd03fabd-94b8-4267-9e53-108fb497b026" alt="Read only"/></td>
+  </tr>
+  <tr>
+    <td align="center">With return action</td>
+    <td align="center">Read only</td>
+  </tr>
+</table>
+
 ## 📋 Requirements
 
 - 📱 Android 6.0 (API level 23) or higher
