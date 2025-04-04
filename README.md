@@ -256,6 +256,19 @@ class _MyAppState extends State<MyApp> {
 - 🌐 Google Translate (Translate)
 - 🔍 Google Search (Web Search)
 
+## 🚀 Planned Features
+
+The following features are planned for future releases:
+
+- 🎨 **Rich Text Support** - Handle formatted text (HTML, markdown) with styling preserved
+- 🔄 **Batch Processing** - Process multiple text selections at once
+- 🌐 **Enhanced Translation** - Built-in translation capabilities with multiple language support
+- 📊 **Text Analytics** - Word count, readability scores, and other text metrics
+- ⚙️ **Advanced Configuration** - More options to control when and how your action appears
+- 🔒 **Enhanced Security** - Additional security features for sensitive text processing
+- 📦 **Pre-built Processors** - Common text processors ready to use out of the box
+- 📄 **Multi-platform Support** - Exploring options for similar functionality on other platforms
+
 ## 🐛 Troubleshooting
 
 ### Common Issues
@@ -270,7 +283,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📧 Contact
 
-If you have any questions or feedback, please open an issue on the GitHub repository or contact the author at example@example.com.
+If you have any questions or feedback, please open an issue on the GitHub repository.
 
 ---
 
