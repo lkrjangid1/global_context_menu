@@ -22,3 +22,9 @@ flutter:
       android:
         package: com.lkrjangid.global_context_menu
         pluginClass: GlobalContextMenuPlugin
+
+screenshots:
+  - description: 'Read only action'
+    path: screenshots/read_only.gif
+  - description: 'With return action'
+    path: screenshots/with_return_action.gif
