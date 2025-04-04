@@ -1,0 +1,24 @@
+name: global_context_menu
+description: A Flutter plugin that allows adding custom actions to Android's text selection toolbar using ACTION_PROCESS_TEXT.
+version: 0.0.1
+homepage: https://github.com/lkrjangid1/global_context_menu
+
+environment:
+  sdk: ">=2.17.0 <4.0.0"
+  flutter: ">=2.5.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.lkrjangid.global_context_menu
+        pluginClass: GlobalContextMenuPlugin
